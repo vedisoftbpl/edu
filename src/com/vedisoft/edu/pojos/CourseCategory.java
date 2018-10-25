@@ -1,6 +1,6 @@
 package com.vedisoft.edu.pojos;
 import java.io.Serializable;
-public class Coursecategory implements Serializable {
+public class CourseCategory implements Serializable {
 int	ccid;
 String ccname;
 public int getCcid() {
@@ -35,7 +35,7 @@ public boolean equals(Object obj) {
 		return false;
 	if (getClass() != obj.getClass())
 		return false;
-	Coursecategory other = (Coursecategory) obj;
+	CourseCategory other = (CourseCategory) obj;
 	if (ccid != other.ccid)
 		return false;
 	if (ccname == null) {
@@ -45,12 +45,12 @@ public boolean equals(Object obj) {
 		return false;
 	return true;
 }
-public Coursecategory(int ccid, String ccname) {
+public CourseCategory(int ccid, String ccname) {
 	super();
 	this.ccid = ccid;
 	this.ccname = ccname;
 }
-public Coursecategory() {
+public CourseCategory() {
 	super();
 }
 
