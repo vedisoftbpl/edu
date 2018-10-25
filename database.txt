@@ -1,0 +1,160 @@
+Masters
+- coursecategories
+- course
+- subjects
+- chapters
+- topics
+- lectures
+- lecturesvideos
+- lecturefiles
+- quiz
+- quizquestions
+- assignments
+- questions
+- students
+- enrollments
+- sessions
+- study
+- studentquizes
+- assignmentsubmission
+- assignmentfiles
+
+
+coursecategories
+- ccid
+- ccname
+
+course
+- courseid
+- ccid
+- coursename
+- coursedetails
+- prereq
+- duration
+
+subjects
+- subid
+- subname
+- courseid
+- objective
+
+chapters
+- chapterid
+- courseid
+- chapno
+- chaptername
+
+topics
+- tid
+- chapterid
+- topicno
+- tname
+- details
+
+lectures
+- lectid
+- lecttitle
+- tid
+- details
+
+lecturesvideos
+- lvid
+- lectid
+- videourl
+- lastupdated
+
+lecturefiles
+- lfid
+- lectid
+- title
+- filetype
+- file
+- fileno
+
+quiz
+- quizid
+- topic
+- tid
+- question
+- questiontype (single/multiple)
+- explaination
+
+quizoptions
+- qoid
+- option
+- isCorrect
+
+assignments
+- assignid
+- chapterid
+- title
+
+questions
+- quesid
+- assignid
+- questionno
+- question
+- solution
+
+students
+- studentid
+- email
+- password
+- name
+- gender
+- dob
+- mobile
+- address
+- city
+- state
+- country
+- pin
+- lastlogin
+
+enrollments
+- enrollid
+- studentid
+- courseid
+- dateofenroll
+
+sessions
+- sessionid
+- logindate
+- logoutdate
+- studentid
+
+study
+- studyid
+- studentid
+- sessionid
+- topicid
+- completed
+
+studentquizes
+- stqzid
+- qzid
+- sessionid
+- score
+- attempts
+
+assignmentsubmission
+- assignsubid
+- studentid
+- assignid
+- datetime
+- score
+
+assignmentfiles
+- assignfileid
+- assignsubid
+- questionid
+- solution
+- remarks
+
+
+https://github.com/vedisoftbpl/edu
+
+
+
+
+
