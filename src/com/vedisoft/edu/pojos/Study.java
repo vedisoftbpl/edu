@@ -81,7 +81,9 @@ public class Study implements Serializable {
 		this.topicId = topicId;
 		this.completed = completed;
 	}
+	
 
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
