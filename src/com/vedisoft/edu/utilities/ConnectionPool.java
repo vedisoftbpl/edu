@@ -6,7 +6,6 @@ import java.util.*;
 
 public class ConnectionPool {
 
-	
 	static ArrayList<Connection> connections = null;
 	static ConnectionPool instance = null;
 
@@ -38,27 +37,24 @@ public class ConnectionPool {
 		if (connections == null) {
 			try {
 				Properties pro = new Properties();
-				InputStream ins = getClass().getResourceAsStream(
-						"Connection.properties");
+				InputStream ins = getClass().getResourceAsStream("Connection.properties");
 				pro.load(ins);
 				String driver = pro.getProperty("driver");
 				String url = pro.getProperty("url");
 				String userName = pro.getProperty("username");
 				String password = pro.getProperty("password");
-				int maxconnections = Integer.parseInt(
-						pro.getProperty("maxconnections")); 
+				int maxconnections = Integer.parseInt(pro.getProperty("maxconnections").trim());
 				Class.forName(driver);
 				connections = new ArrayList<Connection>();
 				int count = 0;
 				while (count < maxconnections) {
-					Connection c = DriverManager.getConnection(
-							url, userName, password);
+					Connection c = DriverManager.getConnection(url, userName, password);
 					connections.add(c);
 					count++;
 				}
 
 			} catch (Exception e) {
-				System.err.println("Cannot connect to database server");
+				System.err.println("Cannot connect to database server" + e);
 			}
 		}
 	}
@@ -73,12 +69,10 @@ public class ConnectionPool {
 				c = connections.get(0);
 				connections.remove(0);
 				break;
-			}
-			else {
+			} else {
 				try {
 					wait();
-				}
-				catch(InterruptedException ie) {
+				} catch (InterruptedException ie) {
 					ie.printStackTrace();
 				}
 			}
@@ -91,12 +85,3 @@ public class ConnectionPool {
 		notifyAll();
 	}
 }
-
-
-
-
-
-
-
-
-

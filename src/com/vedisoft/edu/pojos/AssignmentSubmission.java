@@ -69,6 +69,7 @@ public class AssignmentSubmission implements Serializable {
 
 	public AssignmentSubmission() {
 		super();
+		dateTime=new Date();
 	}
 
 	@Override

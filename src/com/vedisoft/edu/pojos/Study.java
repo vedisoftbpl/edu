@@ -56,7 +56,6 @@ public class Study implements Serializable {
 	}
 
 	public Study(int studyId, int studentId, int sessionId, int topicId, String completed) {
-		super();
 		this.studyId = studyId;
 		this.studentId = studentId;
 		this.sessionId = sessionId;
