@@ -135,8 +135,8 @@ public class StudyDao {
 
 
 	public static void main(String args[]) {
-		// Study st = new Study(3, 2, 1, 1, "Yes");
-		// StudyDao.create(st);
+		 Study st = new Study(3, 2, 1, 1, "Yes");
+		 StudyDao.create(st);
 
 //		Study st = new Study(1, 2, 344, 5, "No");
 //		StudyDao.edit(st);
